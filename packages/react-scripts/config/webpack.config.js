@@ -435,6 +435,9 @@ module.exports = function(webpackEnv) {
                 // being evaluated would be much more helpful.
                 sourceMaps: false,
               },
+              plugins: ["babel-plugin-styled-components",{
+                "fileName": false // filenames don't match display names in our project, so this is extra noise
+              }]
             },
             // "postcss" loader applies autoprefixer to our CSS.
             // "css" loader resolves paths in CSS and adds assets as dependencies.
