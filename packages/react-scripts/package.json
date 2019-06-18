@@ -1,6 +1,6 @@
 {
   "name": "everlong-react-scripts",
-  "version": "3.2.0",
+  "version": "0.1.0",
   "description": "Configuration and scripts for Create React App for Everlong",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "node": ">=8.10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/nicolechung/create-react-app/issues"
   },
   "files": [
     "bin",
