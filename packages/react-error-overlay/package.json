@@ -5,10 +5,10 @@
   "main": "lib/index.js",
   "sideEffects": false,
   "scripts": {
-    "start": "cross-env NODE_ENV=development node build.js --watch",
-    "test": "cross-env NODE_ENV=test jest",
-    "build": "cross-env NODE_ENV=development node build.js",
-    "build:prod": "cross-env NODE_ENV=production node build.js"
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development node build.js --watch",
+    "test": "./node_modules/.bin/cross-env NODE_ENV=test jest",
+    "build": "./node_modules/.bin/cross-env NODE_ENV=development node build.js",
+    "build:prod": "./node_modules/.bin/cross-env NODE_ENV=production node build.js"
   },
   "repository": {
     "type": "git",
