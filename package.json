@@ -1,4 +1,12 @@
 {
+  "name": "everlong-react-scripts",
+  "version": "1.0",
+  "description": "Everlong fork of react scripts. Private repo. Dependencies added here only exist for Everlong.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Everlong/create-react-app.git",
+    "directory": "packages/react-scripts"
+  },
   "private": true,
   "workspaces": [
     "packages/*"
@@ -17,6 +25,13 @@
     "test": "cd packages/react-scripts && node bin/react-scripts.js test",
     "format": "prettier --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
     "compile:lockfile": "node tasks/compile-lockfile.js"
+  },
+  "bin": {
+    "react-scripts": "./packages/react-scripts/bin/react-scripts.js"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "babel-plugin-styled-components": "1.10.4"
   },
   "devDependencies": {
     "eslint": "5.16.0",
