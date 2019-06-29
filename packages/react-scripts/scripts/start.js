@@ -141,7 +141,7 @@ checkBrowsers(paths.appPath, isInteractive)
         );
         console.log();
       }
-
+      console.log(chalk.cyan('Using Everlong version of react-scripts...\n'));
       console.log(chalk.cyan('Starting the development server...\n'));
       openBrowser(urls.localUrlForBrowser);
     });
