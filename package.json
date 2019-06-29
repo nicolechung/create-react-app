@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "babel-plugin-styled-components": "1.10.4"
+    "babel-plugin-styled-components": "1.10.4",
+    "webpack-dev-server": "3.2.1"
   },
   "devDependencies": {
     "eslint": "5.16.0",
