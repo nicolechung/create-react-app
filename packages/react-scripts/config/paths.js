@@ -121,41 +121,42 @@ module.exports = {
   ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
 };
 
-const ownPackageJson = require('../package.json');
-const reactScriptsPath = resolveApp(`node_modules/${ownPackageJson.name}`);
-const reactScriptsLinked =
-  fs.existsSync(reactScriptsPath) &&
-  fs.lstatSync(reactScriptsPath).isSymbolicLink();
+// const ownPackageJson = require('../package.json');
+// const reactScriptsPath = resolveApp(`node_modules/${ownPackageJson.name}`);
+// const reactScriptsLinked =
+//   fs.existsSync(reactScriptsPath) &&
+//   fs.lstatSync(reactScriptsPath).isSymbolicLink();
 
 // config before publish: we're in ./packages/react-scripts/config/
-if (
-  !reactScriptsLinked &&
-  __dirname.indexOf(path.join('packages', 'react-scripts', 'config')) !== -1
-) {
-  module.exports = {
-    dotenv: resolveOwn('template/.env'),
-    appPath: resolveApp('.'),
-    appBuild: resolveOwn('../../build'),
-    appPublic: resolveOwn('template/public'),
-    appHtml: resolveOwn('template/public/index.html'),
-    appIndexJs: resolveModule(resolveOwn, 'template/src/index'),
-    appPackageJson: resolveOwn('package.json'),
-    appSrc: resolveOwn('template/src'),
-    appTsConfig: resolveOwn('template/tsconfig.json'),
-    appJsConfig: resolveOwn('template/jsconfig.json'),
-    yarnLockFile: resolveOwn('template/yarn.lock'),
-    testsSetup: resolveModule(resolveOwn, 'template/src/setupTests'),
-    proxySetup: resolveOwn('template/src/setupProxy.js'),
-    appNodeModules: resolveOwn('node_modules'),
-    publicUrl: getPublicUrl(resolveOwn('package.json')),
-    servedPath: getServedPath(resolveOwn('package.json')),
-    // These properties only exist before ejecting:
-    ownPath: resolveOwn('.'),
-    ownNodeModules: resolveOwn('node_modules'),
-    appTypeDeclarations: resolveOwn('template/src/react-app-env.d.ts'),
-    ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
-  };
-}
+// if (
+//   !reactScriptsLinked &&
+//   __dirname.indexOf(path.join('packages', 'react-scripts', 'config')) !== -1
+// ) {
+//   console.log('config before publish');
+//   module.exports = {
+//     dotenv: resolveOwn('template/.env'),
+//     appPath: resolveApp('.'),
+//     appBuild: resolveOwn('../../build'),
+//     appPublic: resolveOwn('template/public'),
+//     appHtml: resolveOwn('template/public/index.html'),
+//     appIndexJs: resolveModule(resolveOwn, 'template/src/index'),
+//     appPackageJson: resolveOwn('package.json'),
+//     appSrc: resolveOwn('template/src'),
+//     appTsConfig: resolveOwn('template/tsconfig.json'),
+//     appJsConfig: resolveOwn('template/jsconfig.json'),
+//     yarnLockFile: resolveOwn('template/yarn.lock'),
+//     testsSetup: resolveModule(resolveOwn, 'template/src/setupTests'),
+//     proxySetup: resolveOwn('template/src/setupProxy.js'),
+//     appNodeModules: resolveOwn('node_modules'),
+//     publicUrl: getPublicUrl(resolveOwn('package.json')),
+//     servedPath: getServedPath(resolveOwn('package.json')),
+//     // These properties only exist before ejecting:
+//     ownPath: resolveOwn('.'),
+//     ownNodeModules: resolveOwn('node_modules'),
+//     appTypeDeclarations: resolveOwn('template/src/react-app-env.d.ts'),
+//     ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
+//   };
+// }
 // @remove-on-eject-end
 
 module.exports.moduleFileExtensions = moduleFileExtensions;
